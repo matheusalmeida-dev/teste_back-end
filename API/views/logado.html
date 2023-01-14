@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <title>NiceAPI</title>
+
+  <style>
+    body {
+      background-image: url('../views/assets/images/nature.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+    }
+
+    #server-results {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand m-2" href="#">NiceAPI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="./logout">Sair</a>
+        </li>
+    </div>
+  </nav>
+
+  <section>
+    <div class="container mt-5 pt-5">
+      <div class="row">
+        <div class="col-12 col-sm-7 col-md-6 m-auto">
+          <div class="card border-0 shadow mt-5">
+            <div class="card-body">
+              <form method="get">
+                <input type="text" id="inputIdProdutor" name="idProdutor" class="form-control my-4 py-2"
+                  placeholder="ID do Produtor" />
+                <div class="col text-center">
+                  <button type="button" id="submitIdProdutor" class="btn btn-primary btn-lg">Consultar Produtor</button>
+                </div>
+              </form>
+              <form method="post">
+                <input type="text" id="inputNomeProdutor" name="nomeProdutor" class="form-control my-4 py-2"
+                  placeholder="Nome do Produtor" />
+                <input type="text" id="inputCpfProdutor" name="cpfProdutor" class="form-control my-4 py-2"
+                  placeholder="CPF do Produtor" />
+                <div class="col text-center">
+                  <button type="button" id="submitCadastrarProdutor" class="btn btn-info btn-lg mt-2 w">Cadastrar
+                    Produtor</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card border-0 shadow mt-5">
+            <div class="card-body">
+              <form method="get">
+                <input type="text" id="inputIdPropriedade" name="idPropriedade" class="form-control my-4 py-2"
+                  placeholder="ID da Propriedade" />
+                <div class="col text-center">
+                  <button type="button" id="submitIdPropriedade" class="btn btn-primary btn-lg">Consultar
+                    Propriedade</button>
+                </div>
+              </form>
+              <form method="post">
+                <input type="text" id="inputNomePropriedade" name="nomePropriedade" class="form-control my-4 py-2"
+                  placeholder="Nome da Propriedade" />
+                <input type="text" id="inputCadastroRural" name="cadastroRural" class="form-control my-4 py-2"
+                  placeholder="Cadastro Rural" />
+                <div class="col text-center">
+                  <button type="button" id="submitCadastrarPropriedade" class="btn btn-info btn-lg mt-2">Cadastrar
+                    Produtor</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="server-results" class="m-5 rounded">
+    <h1 class='mx-auto'>Resultado das consultas</h1>
+  </div>
+
+
+  <script src="../views/assets/scripts/btnsCFG.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
